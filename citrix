@@ -1,0 +1,68 @@
+AWS:
+
+
+https://github.com/open-guides/og-aws#general-information
+
+
+IAM: its used for User accounts and identities
+IAM is the service you use to manage accounts and permissioning for AWS.
+IAM manages various kinds of authentication, for both users and for software services, fine-grained control of permissions,
+
+Inspector is an automated security assessment service from AWS that helps identify common security risks.
+
+
+
+
+
+
+Intro 
+
+Hi myself Pranav I have completed my graduation in computer engineering in 2020
+From Karmaveer Bhaurao Patil College of Engineering.
+And I have been  working as cloud engineer since past 1 yr 10 months
+Actually I was bit interested into cloud technology from college itself and as I had done cloud certs in college I got my first opportunity after passing out which was in company named searce 
+
+I competed in the Google Cloud Dev Championship and was ranked 135th.
+
+
+
+
+At Searce as a cloud engineer my work here is to deploy the applications of the various organizations on the cloud 
+
+
+Putting websites to monitoring Patching servers, setting up cron jobs 
+
+And as searce was msp with google cloud  for infrastructure I was also responsible for Handling and troubleshooting the various errors received from clients 
+
+So much of infra side problems  of googles clients were routed to us and then we used to troubleshoot it and if it was unsolvable by us 
+we would solve the ticket with google team and assists the client 
+
+
+
+After Leaving Searce I joined Dassault Systemes and my current work here is 
+
+Work Related 
+
+
+Deployment and Automation in cloud environments.i have used 
+python  modules such as  pyauto gui bit of selenium have Worked on our in-house tools automation 
+
+
+
+
+We have different 3ds services which customers use, my role in here to assess these services I get a service referential from developer in which cloud architecture of the service is present 
+
+And then I need to check the working of the service according to the cloud architecture , deploy the service, Check the working of the vms , perform operations on vms such as backup restore ,failover:master slave, scale H, scale volume ,scale storage, rolling upgrade of vms, relocate service 
+
+monitoring part of those vms  
+
+
+So we have container based services and vm based services on cloud.
+So we have container farm created for paas services and in here we deploy all of these container services
+And  We use this container farm as Kubernetes cluster and the services deployed in it acts as pods so it becomes easy for us to manage it 
+
+Also we have And vm based services that we deploy it on aws and ows region 
+
+
+upgrade and maintenance of 3DExperience Platform 
+of Dassault Systemes
