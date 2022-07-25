@@ -1,0 +1,332 @@
+SSL, or Secure Sockets Layer, was the original encryption protocol developed for HTTP. SSL was replaced by TLS, or Transport Layer Security, some time ago. SSL handshakes are now called TLS handshakes, although the "SSL" name is still in wide use.
+Specify which version of TLS (TLS 1.0, 1.2, 1.3, etc.) they will use
+Decide on which cipher suites (see below) they will use
+Authenticate the identity of the server via the server’s public key and the SSL certificate
+
+
+https://www.cloudflare.com/en-in/learning/ssl/what-happens-in-a-tls-handshake/
+
+
+
+
+3. ARP learning process
+4. TCP Header and IP header
+5. IPSEC
+
+
+
+What is Terraform State File
+What happens when a Computer reboot
+
+What is ARP? Where does it happen in a network?
+What are group policies in Windows? Where and when do the get applied?
+What happens if ICMP is blocked in a network? And how will you detect it?
+3:How a webpage is loaded when we type an URL in a Browser?
+
+
+
+
+
+
+
+
+Physical layer :
+represent physical devices that interconnect computers 
+Its about cables ,connectors 
+
+Data	link layer:
+At this level we introduce our first protocol 
+Responsible for defining common way of interpreting this signal so network devices can communicate 
+Lot of protocol are there at data link layer ,most common is Ethernet :responsible for getting data to node on the same network 
+
+Ethernet as a protocol uses csma/cd 
+Csma/cd:carrier sense multiple access with collision detection 
+Csma/cd:used to determine when the communication	channels are clear and when a device is free to transfer data 
+
+
+
+Network link :allows different networks to communicate with each other through devices known as router 
+Network layer responsible for delivering data across the network 
+Most common protocol used here is IP 
+
+
+
+
+Transport layer :
+Sorts out which client and server programs are supposed to get that data 
+Tcp/ip 
+
+
+Application layer :
+All applications are present 
+
+
+
+
+
+
+
+Cables:
+
+Allows different devices to connect to each other 
+Most network cables that carry data are of two types copper and fibre 
+
+Copper cable:types
+Cat5,cat5e,cat6
+Cat is called as categories , defines no of twists in copper wire ,usable length and transfer rates 
+
+
+Cross talk when an electric pulse on one wire is accidentally detected on another wire .
+
+
+
+
+Fiber cables:contain individual optical fibers ,which are tiny tubes made out of glass ,use pulses of light to transfer data 
+
+
+
+
+Hubs:
+Cables only allow you to from point to point connection ,not useful where we have billions of devices 
+
+Hub is a physical layer device that allows for connections from many computers at once 
+All devices connected to hub will end up talking to other devices at same time , it depends on system if the data was meant for them
+
+Are artifacts today not in use because causes much of network noise ,
+
+
+
+
+Switches:similar to hub , to switch you can connect many devices at once 
+While switch is layer 2 , data link layer device because now switch here can inspect the content of ethernet protocol data ,determining for which network data is intended for 
+
+Switches will have many network ports 
+
+
+Router:
+
+Routers knows how to forward data between independent network ,operates at layer 3 (network layer )
+Router stores internal tables to how to route traffic all over the world 
+Home router will not detailed routing table , inside the home to isp service provider 
+
+Router share data with global router via  protocol know as BGP (broader gateway protocol ) - lets them find the most optimal path 
+
+
+
+
+
+
+
+
+
+
+
+server,
+is as something that provides data to something requesting that data.
+The thing receiving the data, is referred to as a client
+
+Bit: smallest representation of data that a computer can understand 
+
+
+Duplex communication:information can flow in both directions across the cable 
+
+Simplex comunication:unidirectional 
+
+
+
+Rj45:registered jack
+Link light :when connected properly 
+Activity light:when data is being transferred 
+
+
+Patch panel will contain many network ports
+
+Line coding is the modulation of an electrical charge so that each side of a connection knows what is a one and what is a zero.
+
+
+
+
+MAc address: media access control 
+Globally unique identifier attached to an individual network interface 
+48 bit number normally represented by six groupings of two hexadecimal numbers 
+
+Octet:any number represented by 8 bit 
+
+First three octets of Mac address represent organizationally unique identifier (oui)
+
+Unicast : unicast transmission is always meant for just one receiving address ,
+first octet is set to 0
+
+
+Multicast: first octet is set to 1 , received by devices connected to network 
+Is discarded or accepted depending 
+
+Broadcast : sent to everyone 
+Achieved by ethernet broadcast address its all FFFFFFFFF
+
+
+
+Dissecting an ethernet frame:
+
+Data packet : is set of binary data being sent across the network 
+
+Ethernet frame:highly structured collection of information presented in specific order 
+
+
+First part of ethernet frame :preamble 
+The first seven bytes are a series of alternating ones and zeros.These act partially as a buffer between frames and can also be used by the network interfaces to synchronize internal clocks they use, to regulate the speed at which they send data
+
+last byte in the preamble is known as the SFD or start frame delimiter.
+
+
+This signals to a receiving device that the preamble is over and that the actual frame contents will now follow. Immediately following the start frame delimiter, comes the destination MAC address.
+
+
+Ethernet frame is called the EtherType field. It's 16 bits long and used to describe the protocol of the contents of the frame.
+
+
+Vlan lets you have multiple logical lans 
+
+
+
+
+
+Internet protocol address :
+IP addresses are a 32 bit long numbers made up of four octets, and
+each octet is normally described in decimal numbers. 8 bits of data or a single octet can represent all decimal numbers from 0 to 255
+
+IP addresses belong to the networks, not the devices attached to those networks.
+
+
+Ip datagram header 
+
+Under the IP protocol, a packet is usually referred to as an IP datagram
+two primary sections of an IP datagram are the header and the payload.
+Ip header is 20 bytes
+
+the flag field is used to indicate if a datagram is allowed to be fragmented
+Fragmentation is the process of taking
+a single IP datagram and splitting it up into several smaller datagrams.
+
+
+The Time to Live or TTL field.This field is an 8-bit field that indicates how
+many router hops a datagram can traverse before it's thrown away.
+
+
+
+Transport layer protocol are tcp and udp 
+
+
+Padding is series of zeroes used to ensure  that header is of total correct size 
+
+IP addresses can be split into two sections, the network ID and the host ID.
+
+
+
+
+The address class system is a way of defining how the global IP address space is split up.
+There are three primary types of address classes.
+Class A, Class B and Class C.
+
+Class A:
+123.456.780.00
+
+Where first octet is used as network id and remaining three are used as host id 
+
+0 to 127 
+
+16 million addresses
+
+Class B:
+123.456.780.00
+
+64000 addresses
+
+Where first two octet is used as network id and remaining two  are used as host id 
+128 to 191 
+
+
+
+Class c:
+
+192 to 224
+254 address 
+
+Class d:used for multicasting 
+
+
+
+224 to 239 
+
+
+Class E :addresses make up all of the remaining IP addresses.
+But they are unassigned and only used for testing purposes
+
+240 to 255
+
+
+
+
+Arp:address resolution protocol
+
+ARP is a protocol used to discover the hardware address of a node with a certain
+IP address.
+needs to be encapsulated inside an Ethernet frame
+
+
+
+
+
+subnetting is the process of taking a large network and splitting it up into many individual smaller subnetworks or subnet
+
+
+
+classless inter-domain routing comes into play.
+CIDR is an even more flexible approach to describing blocks of IP addresses.
+
+
+
+
+
+
+
+
+
+
+
+The Domain Name System (DNS) is the phonebook of the Internet
+DNS translates domain names to IP addresses DNS servers eliminate the need for humans to memorize IP addresses
+
+
+
+
+
+
+
+
+4 DNS servers involved in loading a webpage
+DNS recursor:
+DNS recursor is a server designed to receive queries from client machines
+
+The root server is the first step in translating (resolving) human readable host names into IP addresses
+
+Tld,authorative name server
+
+
+
+
+
+
+
+
+https://www.javatpoint.com/http-interview-questions  
+
+
+
+
+
+
+
+
+
+
