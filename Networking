@@ -314,10 +314,17 @@ Tld,authorative name server
 
 
 
+*https://linuxjourney.com/lesson/network-interfaces
+1. Network Interfaces
 
+A network interface is how the kernel links up the software side of networking to the hardware side.
 
+The ifconfig command
 
+The ifconfig tool allows us to configure our network interfaces, if we don't have any network interfaces set up, the kernel's device drivers and the network won't know how to talk to each other. Ifconfig runs on bootup and configures our interfaces through config files, but we can also manually modify them. The output of ifconfig shows the interface name on the left side and the right side shows detailed information. You'll most commonly see interfaces named eth0 (first Ethernet card in the machine), wlan0 (wireless interface), lo (loopback interface). The loopback interface is used to represent your computer, it just loops you back to yourself. This is good for debugging or connecting to servers running locally. 
 
+Rhel is ens192 
+ubuntu eth0 
 
 https://www.javatpoint.com/http-interview-questions  
 
