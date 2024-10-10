@@ -1,0 +1,48 @@
+
+https://www.youtube.com/watch?v=U3RkDLtS7uY
+ What are Distributed CACHES and how do they manage DATA CONSISTENCY? 
+
+Notes:
+
+In Memory Caching
+
+- Save memory cost - For commonly accessed data
+- Avoid Re-computation - For frequent computation like finding average age
+- Reduce DB Load - Hit cache before querying DB
+
+Drawbacks of Cache
+
+- Hardware (SSD) much more expensive than DB
+- As we store more data on cache, search time increases (counter productive)
+
+Design
+
+- Database (Infinite information) vs Cache (Relevant information)
+
+Cache Policy
+
+- Least Recently Used (LRU) - Top entires are recent entries, remove least recently used entries in cache
+
+Issue with caches
+
+- Extra calls - When we couldn’t find entry in cache, we query from database.
+- Threshing - Input and output cache without ever using results
+- Consistency - When update DB, we must maintain consistency between cache and DB
+
+Where to place the cache
+
+- Close to server (in memory)
+    - Benefit - Fast
+    - Issue - Maintaining consistency between memory of different servers, especially for sensitive data such as password
+- Close to DB (global cache, i.e. Redis)
+    - Benefit - Accurate, Able to scale independently
+
+Write-through vs Write-back
+
+- Write-through - Update cache, before updating DB
+    - Not possible for multiple servers
+- Write-back - Update DB, before updating cache
+    - Issue: Performance - When we update the DB, and we keep updating the cache based on that, much of the data in the cache will be fine and invalidating them will be expensive
+- Hybrid
+    - Any update first write to cache
+    - After a while, persist entries in bulk to database
